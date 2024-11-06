@@ -1,71 +1,50 @@
-# only-git-blame README
+# pure-git-blame
 
-This is the README for your extension "only-git-blame". After writing up a brief description, we recommend including the following sections.
+A minimalist VSCode extension that focuses solely on Git blame functionality. View commit information right in your editor without any unnecessary features.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 🎯 **Single Purpose**: Dedicated purely to git blame functionality
+- 💡 **Line Attribution**: Shows author and commit date for selected lines
+- 📝 **Detailed Information**: Hover over blame annotations to view complete commit details
+- 🚀 **Lightweight**: No bloat, just the blame feature you need
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Clone the repository
+2. Run the packaging command:
+   ```bash
+   pnpm package
+   ```
+3. In VSCode:
+   - Open the Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+   - Click on the "..." menu (More Actions)
+   - Select "Install from VSIX..."
+   - Navigate to and select the generated .vsix file
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
 
-## Requirements
+1. Open any file in a Git repository
+2. Execute the command "Toggle Git Blame" through:
+   - Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and search for "Toggle Git Blame"
+   - Or set up your preferred keyboard shortcut
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Features in Detail
 
-## Extension Settings
+- **Line Attribution**: Once enabled, each line will display:
+  - Author name
+  - Commit date
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- **Detailed View**: Hover over the blame annotation to see:
+  - Complete commit message
+  - Full commit hash
+  - Author details
+  - Timestamp
 
-For example:
+## Contributing
 
-This extension contributes the following settings:
+Feel free to submit issues and enhancement requests.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## License
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[MIT License](LICENSE)

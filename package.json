@@ -1,7 +1,7 @@
 {
-  "name": "only-git-blame",
-  "displayName": "only-git-blame",
-  "description": "",
+  "name": "pure-git-blame",
+  "displayName": "pure-git-blame",
+  "description": "git blame information provider",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
@@ -9,15 +9,27 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "only-git-blame.helloWorld",
-        "title": "Hello World"
+        "command": "pure-git-blame.toggle",
+        "title": "Toggle Git Blame"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Simple Git Blame",
+      "properties": {
+        "pure-git-blame.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable git blame annotations"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
