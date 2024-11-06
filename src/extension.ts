@@ -95,6 +95,9 @@ class GitBlameProvider {
 		if (message === 'Not a git repository' && this.cache.has('error_shown')) {
 			return;
 		}
+		if (/.*is outside repository.*/.test(message)) {
+			return;
+		}
 
 		this.cache.set('error_shown', []);
 
